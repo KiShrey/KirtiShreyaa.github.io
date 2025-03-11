@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Computational Identification of Potential Biomarkers for Thyroid Cancer Using Multi-Omics and Bioinformatics Approaches.">
+    <meta name="keywords" content="Bioinformatics, Cancer Research, Biomarker Discovery, Thyroid Cancer, Gene Expression Analysis, R Programming, MultiOmics">
+    <title>Biomarker Discovery for Thyroid Cancer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- JavaScript for Modal Functionality -->
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById("modalImage").src = imageSrc;
+            document.getElementById("imageModal").classList.remove("hidden");
+        }
+        
+        function closeModal() {
+            document.getElementById("imageModal").classList.add("hidden");
+        }
+        
+        // Close modal on 'Escape' key press
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+        </script>
+</head>
+<body class="bg-gradient-to-b from-blue-50 via-white to-blue-100 text-gray-800 font-sans">
+    <header class="bg-blue-600 text-white py-10 text-center shadow-md">
+        <h1 class="text-4xl font-bold">Computational Biomarker Discovery for Thyroid Cancer</h1>
+        <p class="mt-2 text-lg">Using Multi-Omics and Bioinformatics Approaches</p>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <a href="index.html" class="inline-block mb-4 text-blue-600 hover:underline">← Back</a>
+        <section class="bg-white p-8 rounded-lg shadow-md mb-10">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">🔬 Project Overview</h2>
+            <p>This research paper explores computational methods for identifying biomarkers in thyroid cancer, 
+              utilizing gene expression datasets from the Gene Expression Omnibus (GEO). By analyzing differentially
+              expressed genes (DEGs) through tools like EdgeR, DAVID, and KEGG, the study identifies key genes and pathways, 
+              such as APOC1, CHI3L1 and SERPINA1, that are crucial in thyroid cancer progression. These findings are pivotal for 
+              improving diagnostic precision and developing targeted therapies, demonstrating the power of integrating 
+              bioinformatics with clinical research to tackle complex diseases.</p>  </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-md mb-10">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">🛠 Technologies & Tools</h2>
+            <ul class="list-disc pl-5">
+                <li><strong>Languages:</strong> R, Python, Excel</li>
+                <li><strong>Bioinformatics Tools:</strong> GEO2R, EdgeR, DAVID, KEGG, STRING, Cytoscape, GSEA</li>
+                <li><strong>Visualization:</strong> Heatmaps, PCA, UpSet Plots, PPI Networks</li>
+                <li><strong>Statistical Methods:</strong> T-Test, FDR adjustment, Log2FC</li>
+            </ul>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-md mb-10">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">📊 Methodology</h2>
+            <ol class="list-decimal pl-5">
+                <li>Data collection from GEO (5 datasets).</li>
+                <li>Preprocessing and normalization in R and Excel.</li>
+                <li>Differential gene expression analysis using EdgeR and T-Test.</li>
+                <li>Integration of DEGs across datasets.</li>
+                <li>Functional annotation via DAVID and KEGG.</li>
+                <li>Protein interaction mapping with STRING and Cytoscape.</li>
+                <li>Survival analysis with GSEA.</li>
+            </ol>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-md mb-10">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">🧬 Key Findings</h2>
+            <ul class="list-disc pl-5">
+                <li><strong>Top Biomarkers:</strong> APOE, SERPINA1, CHI3L1, APOC1, HMGA2, LRP1B, LIPH.</li>
+                <li><strong>Pathways Involved:</strong> Notch signaling, TGF-beta, cholesterol metabolism, immune response.</li>
+                <li><strong>Biological Insight:</strong> Strong association of lipid metabolism and immune evasion in thyroid cancer.</li>
+            </ul>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-md mb-10">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">📷 Visuals</h2>
+            <p class="mb-4">Key visualizations from the project:</p>
+            <h3 class="text-2xl font-semibold text-blue-500 mt-8">PCA Visualizations</h3>
+            <p class="mb-6 text-center">Click on any image to view it in full size.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                <div class="flex flex-col items-center">
+                    <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//PCA for GSE29265.png" 
+                      class="w-full rounded-lg shadow my-4" 
+                      onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//PCA Images//PCA for GSE29265.png')" 
+                      class="cursor-pointer w-[250px] h-[180px] rounded-lg shadow-lg hover:scale-105 transition object-contain"  
+                      alt="PCA for GSE29265" 
+                      style="object-fit: contain; width: 200px; height: 150px;">
+                      <p class="mt-2 text-sm text-gray-500 text-center">PCA of Gene Expression Data (GSE29265)</p>
+                  </div>
+                <div class="flex flex-col items-center">
+                  <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//PCA_GSE33630.png" 
+                     class="w-full rounded-lg shadow my-4" 
+                     alt="PCA for GSE33630"
+                     onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//PCA Images//PCA_GSE33630.png')"
+                     class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                     style="object-fit: contain; width: 200px; height: 150px;">
+                     <p class="mt-2 text-sm text-gray-500 text-center">PCA of Gene Expression Data GSE33630</p>
+                 </div>
+                <div class="flex flex-col items-center">
+                    <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//PCA_GSE35570.png" 
+                       class="w-full rounded-lg shadow my-4" 
+                       alt="PCA for GSE35570"
+                       onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//PCA Images//PCA_GSE35570.png')"
+                       class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                       style="object-fit: contain; width: 200px; height: 150px;">
+                       <p class="mt-2 text-sm text-gray-500 text-center">PCA of Gene Expression Data GSE35570</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//PCA_GSE82208.png" 
+                         class="w-full rounded-lg shadow my-4" 
+                         alt="PCA for GSE82208"
+                         onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//PCA Images//PCA_GSE82208.png')"
+                         class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                         style="object-fit: contain; width: 200px; height: 150px;">
+                         <p class="mt-2 text-sm text-gray-500 text-center">PCA of Gene Expression Data GSE82208</p>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//PCA_GSE60542.png" 
+                       class="w-full rounded-lg shadow my-4" 
+                       alt="PCA for GSE60542"
+                       onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//PCA Images//PCA_GSE60542.png')"
+                       class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                       style="object-fit: contain; width: 200px; height: 150px;">
+                       <p class="mt-2 text-sm text-gray-500 text-center">PCA of Gene Expression Data GSE60542</p>
+                </div>
+          </div>
+            <h3 class="text-2xl font-semibold text-blue-500 mt-8">Common DEGs Across the 4 Datasets</h3>
+            <p class="mb-6 text-center">Click on the image to view it in full size.</p>
+                <div class="flex flex-col items-center">
+                    <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//UpsetPlot_Common DEGs.png" 
+                         class="w-full rounded-lg shadow my-4" 
+                         alt="Upset Plot of Common DEGs"
+                         onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//UpsetPlot_Common DEGs.png')"
+                         alt="Common DEGs Across the 4 Datasets"
+                         class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                         style="object-fit: contain; width: 200px; height: 150px;">
+                         <p class="mt-2 text-sm text-gray-500 text-center">Common DEGs Across the 4 Datasets/p>
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-500 mt-8">Gene Oncology with DAVID</h3>
+            <p class="mb-6 text-center">Click on the image to view it in full size.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                    <div class="flex flex-col items-center">
+                         <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//Gene Involvement.png" 
+                              class="w-full rounded-lg shadow my-4" 
+                              alt="Gene Involvement"
+                              onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//Gene Oncology using DAVID//Gene Involvement.png')"
+                              class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                              style="object-fit: contain; width: 200px; height: 150px;">
+                              <p class="mt-2 text-sm text-gray-500 text-center">Gene Involvement after Differential Gene Expression Analysis</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//DAVID Key Processes and their Enrichment Scores.png" 
+                             class="w-full rounded-lg shadow my-4" 
+                             alt="DAVID Key Processes and their Enrichment Scores"
+                             onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//Gene Oncology using DAVID//DAVID Key Processes and their Enrichment Scores.png')"
+                             class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                             style="object-fit: contain; width: 200px; height: 150px;">
+                             <p class="mt-2 text-sm text-gray-500 text-center">DAVID Key Processes and their Enrichment Scores</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//DAVID Gene Involvement in Annotation Clusters.png" 
+                             class="w-full rounded-lg shadow my-4" 
+                             alt="DAVID Gene Involvement in Annotation Clusters"
+                             onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//Gene Oncology using DAVID//DAVID Gene Involvement in Annotation Clusters.png')"
+                             class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                             style="object-fit: contain; width: 200px; height: 150px;">
+                             <p class="mt-2 text-sm text-gray-500 text-center">DAVID Gene Involvement in Annotation Clusters</p>
+                    </div>
+                </div>
+            <h3 class="text-2xl font-semibold text-blue-500 mt-8">Gene pathway Analysis with KEGG</h3>
+            <p class="mb-6 text-center">Click on the image to view it in full size.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                    <div class="flex flex-col items-center">
+                        <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//KEGG Pathways Contribution to Genes Heatmap.png" 
+                             class="w-full rounded-lg shadow my-4" 
+                             alt="KEGG Pathways Contribution to Genes Heatmap"
+                             onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//Pathways Analysis using KEGG//KEGG Pathways Contribution to Genes Heatmap.png')"
+                             class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                             style="object-fit: contain; width: 200px; height: 150px;">
+                             <p class="mt-2 text-sm text-gray-500 text-center">KEGG Pathways Contribution to Genes Heatmap</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//Pathways Relevance to Thyroid Cancer.png" 
+                             class="w-full rounded-lg shadow my-4" 
+                             alt="Pathways Relevance to Thyroid Cancer"
+                             onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//Pathways Analysis using KEGG//Pathways Relevance to Thyroid Cancer.png')"
+                             class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                             style="object-fit: contain; width: 200px; height: 150px;">
+                             <p class="mt-2 text-sm text-gray-500 text-center">Pathways Relevance to Thyroid Cancer</p>
+                    </div>
+                </div>
+            <h3 class="text-2xl font-semibold text-blue-500 mt-8">GSEA Disease Survival Analysis</h3>
+            <p class="mb-6 text-center">Click on the image to view it in full size.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                    <div class="flex flex-col items-center">
+                        <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//SERPINA1.png" 
+                             class="w-full rounded-lg shadow my-4" 
+                             alt="SERPINA1"
+                             onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//GSEA Disease Survival Analysis//SERPINA1.png')"
+                             class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                             style="object-fit: contain; width: 200px; height: 150px;">
+                             <p class="mt-2 text-sm text-gray-500 text-center">SERPINA1</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//APOC1.png" 
+                             class="w-full rounded-lg shadow my-4" 
+                             alt="APOC1"
+                             onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//GSEA Disease Survival Analysis//SERPINA1.png')"
+                             class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                             style="object-fit: contain; width: 200px; height: 150px;">
+                             <p class="mt-2 text-sm text-gray-500 text-center">APOC1</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//images//CHI3L1.png" 
+                             class="w-full rounded-lg shadow my-4" 
+                             alt="CHI3L1"
+                             onclick="openModal('C://Users//Kirti Shreyaa//OneDrive//Documents//KirtiShreyaa.github.io//GSEA Disease Survival Analysis//CHI3L1.png')"
+                             class="cursor-pointer w-40 h-40 rounded-lg shadow-lg hover:scale-105 transition"
+                             style="object-fit: contain; width: 200px; height: 150px;">
+                             <p class="mt-2 text-sm text-gray-500 text-center">CHI3L1</p>
+                    </div>
+                </div>
+      </section>
+      <!-- Modal Container (Hidden by Default) -->
+        <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+    <div class="relative">
+        <img id="modalImage" class="max-w-4xl max-h-[90vh] rounded-lg shadow-lg">
+        <button onclick="closeModal()" class="absolute top-2 right-2 bg-white rounded-full p-2 text-gray-800">
+            ✖
+        </button>
+    </div>
+        </div>
+          
+        <section class="bg-white p-8 rounded-lg shadow-md mb-10">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">🚀 Challenges & Solutions</h2>
+            <p><strong>Challenge:</strong> Integrating multiple datasets with variable sample sizes.</p>
+            <p><strong>Solution:</strong> Normalization and batch effect correction ensured robust statistical comparisons.</p>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-md mb-10">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">📈 Future Work</h2>
+            <p>These findings lay a foundation for experimental validation of biomarkers, contributing to early diagnosis and personalized treatment strategies in thyroid cancer.</p>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">📁 Links & Resources</h2>
+            <ul class="list-disc pl-5">
+                <li><a href="https://github.com/KiShrey/Biomarker-Identification-in-Thyroid-Carcinoma" class="text-blue-500 hover:underline">GitHub Repository</a></li>
+                <li><a href="#" class="text-blue-500 hover:underline">Dataset on GEO</a></li>
+                <li><a href="https://github.com/KiShrey/Biomarker-Identification-in-Thyroid-Carcinoma/releases/tag/v1.0">Full Report (PDF)</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white text-center py-6">
+        <p>&copy; 2025 Kirti Shreyaa | Bioinformatics & Data Science</p>
+    </footer>
+</body>
+</html>
